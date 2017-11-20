@@ -30,7 +30,8 @@ To install, use `go get`:
 ```bash
 $ go get -d github.com/zafarella/envs
 ```
-
+## Status
+[![Build Status](https://travis-ci.org/zafarella/envs.svg?branch=master)](https://travis-ci.org/zafarella/envs)
 
 ## Author
 
