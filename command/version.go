@@ -36,4 +36,6 @@ func (c *VersionCommand) Run(args []string) int {
 func (c *VersionCommand) Synopsis() string {
 	return fmt.Sprintf("Print %s version and quit", c.Name)
 }
-
+func (c *VersionCommand) Help() string {
+	return ""
+}
