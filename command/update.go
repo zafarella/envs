@@ -9,8 +9,11 @@ type UpdateCommand struct {
 }
 
 func (c *UpdateCommand) Run(args []string) int {
-	// Write your code here
-
+	/*
+		1.compare hashes/tags
+		2. if diff
+		3. download new version
+	*/
 	return 0
 }
 
@@ -20,6 +23,7 @@ func (c *UpdateCommand) Synopsis() string {
 
 func (c *UpdateCommand) Help() string {
 	helpText := `
+Updates the envs binary to latest available version.
 
 `
 	return strings.TrimSpace(helpText)

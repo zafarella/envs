@@ -21,6 +21,7 @@ func (c *RemoveCommand) Synopsis() string {
 func (c *RemoveCommand) Help() string {
 	helpText := `
 
+remove specified branches from an environment.
 `
 	return strings.TrimSpace(helpText)
 }
