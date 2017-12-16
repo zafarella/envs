@@ -11,6 +11,8 @@ type ListCommand struct {
 func (c *ListCommand) Run(args []string) int {
 	// Write your code here
 
+	// git branch --merged
+
 	return 0
 }
 
@@ -21,6 +23,7 @@ func (c *ListCommand) Synopsis() string {
 func (c *ListCommand) Help() string {
 	helpText := `
 
+List branches for the given environment.
 `
 	return strings.TrimSpace(helpText)
 }
