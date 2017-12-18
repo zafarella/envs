@@ -41,9 +41,12 @@ func Commands(meta *command.Meta) map[string]cli.CommandFactory {
 		"version": func() (cli.Command, error) {
 			return &command.VersionCommand{
 				Meta:     *meta,
-				Version:  Version,
-				Revision: GitCommit,
 				Name:     Name,
+				Revision: GitCommit,
+				Version:  Version,
+				BuildBy: BuiltUser,
+				Tag:   GitTag,
+
 			}, nil
 		},
 	}
