@@ -1,7 +1,6 @@
 # envs
 
 
-
 ## Description
 
 Flexible git branch manager for collaborative environment.
@@ -32,6 +31,7 @@ $ go get -d github.com/zafarella/envs
 ```
 ## Status
 [![Build Status](https://travis-ci.org/zafarella/envs.svg?branch=master)](https://travis-ci.org/zafarella/envs)
+[![Coverage Status](https://coveralls.io/repos/github/zafarella/envs/badge.svg?branch=master)](https://coveralls.io/github/zafarella/envs?branch=master)
 
 ## Author
 
