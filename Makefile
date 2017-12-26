@@ -9,7 +9,7 @@ COMMIT_HASH=-X main.GitCommit=$(shell git rev-parse --short HEAD)
 BUILT_USER=-X main.BuiltUser=$(shell echo ${USER})
 LDFLAGS=-ldflags "$(BUILT_USER) $(COMMIT_HASH)"
 
-all: test build
+all: deps test build
 build:
 	$(GOBUILD) -o $(BINARY_NAME) $(LDFLAGS) -v
 
