@@ -13,7 +13,6 @@ type InitCommand struct {
 }
 
 func (c *InitCommand) Run(args []string) int {
-	// Write your code here
 	fmt.Println("args = ", args)
 
 	osGitUser, err := exec.Command("git", "config", "--get", "user.name").Output()

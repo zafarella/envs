@@ -7,7 +7,6 @@ import (
 
 type VersionCommand struct {
 	Meta
-
 	Name     string
 	Version  string
 	Revision string

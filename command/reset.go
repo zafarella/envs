@@ -13,12 +13,12 @@ func (c *ResetCommand) Run(args []string) int {
 	red := color.New(color.FgHiRed).PrintfFunc()
 
 	if len(args) < 2 {
-		red("You missing either branch or app name.")
+		red("You did not provided either branch or app name.")
 		return 1
 	}
 
-	var app string = args[0]
-	var envBranch string = args[1]
+	var app = args[0]
+	var envBranch = args[1]
 	if askForConfirmation("This will reset branch " + envBranch + " for " + app + ". Continue?") {
 		red("Reseting branch %s for %s..", envBranch, app)
 		/*
