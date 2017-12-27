@@ -13,6 +13,7 @@ type ListCommand struct {
 }
 
 func (c *ListCommand) Run(args []string) int {
+	//c.appName = args[1]
 	// git branch --merged
 	//r, err := git.Clone(memory.NewStorage(), nil, &git.CloneOptions{
 	//	URL: "https://github.com/zafarella/envs",

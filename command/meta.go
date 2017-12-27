@@ -11,9 +11,12 @@ import (
 
 // Meta contain the meta-option that nearly all subcommand inherited.
 type Meta struct {
-	Ui   cli.Ui
-	test string
+	Ui      cli.Ui
+	appName string
+	test    string
 }
+
+
 
 func askForConfirmation(s string) bool {
 	reader := bufio.NewReader(os.Stdin)
@@ -54,4 +57,9 @@ func Info(format string, args ...interface{}) {
 // Warning should be used to display a warning
 func Warning(format string, args ...interface{}) {
 	fmt.Printf("\x1b[36;1m%s\x1b[0m\n", fmt.Sprintf(format, args...))
+}
+
+// Error printer
+func Error(format string, args ...interface{}) {
+	fmt.Printf("\x1b[38;1m%s\x1b[0m\n", fmt.Sprintf(format, args...))
 }

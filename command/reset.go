@@ -1,7 +1,6 @@
 package command
 
 import (
-	"github.com/fatih/color"
 	"strings"
 )
 
@@ -10,17 +9,16 @@ type ResetCommand struct {
 }
 
 func (c *ResetCommand) Run(args []string) int {
-	red := color.New(color.FgHiRed).PrintfFunc()
 
 	if len(args) < 2 {
-		red("You did not provided either branch or app name.")
+		Info("You did not provided either branch or app name.")
 		return 1
 	}
 
-	var app = args[0]
+	c.appName = args[0]
 	var envBranch = args[1]
-	if askForConfirmation("This will reset branch " + envBranch + " for " + app + ". Continue?") {
-		red("Reseting branch %s for %s..", envBranch, app)
+	if askForConfirmation("This will reset branch " + envBranch + " for " + c.appName + ". Continue?") {
+		Info("Reseting branch %s for %s..", envBranch, c.appName)
 		/*
 			git branch -D  args[1]
 			git checkout master upstream/master
